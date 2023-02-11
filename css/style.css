@@ -1,0 +1,148 @@
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap');
+
+.hidden {
+    display: none;
+}
+
+img {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#clock {
+    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+#Login-Form .hidden {
+    display: flex;
+}
+
+.Login input {
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px 8px;
+    margin-right: 15px;
+    /* box-shadow: 10px; */
+}
+
+.Login button {
+    display: inline;
+    border: none;
+    background-color:  white;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#greeting {
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.todo {
+    position: relative;
+    height: 300px;
+    width: 520px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 16px;
+    padding: 10px 10px;
+    margin-top: 50px;
+    overflow: scroll;
+}
+
+.todo input {
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 4px 290px 4px 8px;
+    margin-bottom: 20px;
+}
+
+.todo input::placeholder {
+    color: black;
+}
+
+.todo ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: circle;
+}
+
+.todo li span { 
+    margin-right: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.todo li button {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 20px;
+    right: 10px;
+    overflow: scroll;
+}
+
+#quote {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#quote span:first-child {
+    font-size: 15px;
+    margin-bottom: 5px;
+} 
+
+#quote span:last-child {
+    font-size: 15px;
+    font-weight: 700;
+} 
+
+/* 문제 1. position에 대한 정리가 깔끔하지 않아 화면크기를 조정하면 fixed와 flex들이 섞이게 된다.
+문제 2. todolist에 hover기능을 사용하게 되면 전체 height 값에 따라 위의 시계와 로그인창까지 움직인다. flex로 했기 떄문
+그래서 두덩어리 따로 flex해서 정리해야할 것 같다.
+문제 3.   */
