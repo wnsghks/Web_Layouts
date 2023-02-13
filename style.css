@@ -9,6 +9,11 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+}
+
 nav {
     display: flex;
     position: sticky;
@@ -233,6 +238,7 @@ nav {
     justify-content: space-between;
     width: 955px;
     padding: 0 0 20px 0;
+    z-index: 0;
 }
 
 .today_nav h1 {
@@ -273,3 +279,88 @@ nav {
 }
 
 /* nav에 class를 안붙이고 썼더니 붙인 클래스까지 적용되어버림 다음부터 class를 적극적으로 사용해야할듯 */
+
+.play_bar {
+    display: flex;
+    position: fixed;
+    /* 왠지 모르지만 sticky는 작동이 안됨. nav에만 사용 가능한건가...? */
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    z-index: 999;
+}
+
+.play_bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(112, 112, 112);
+    cursor: pointer;
+}
+
+.play_bar:hover::before {
+    height: 5px;
+    transition: height .5s ease-in;
+}
+/* hover이 가상 선택자 before보다 앞에 있어야 작동됨 */
+.play_bar .track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.play_bar .track img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.play_bar .track strong {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.play_bar .track strong span {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.play_bar .play_music img {
+    width: 250px;
+    height: auto;
+    border: none;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.play_bar .playtime .now_playtime span {
+    font-size: 11px;
+    color: black;
+    margin-right: 3px;
+}
+
+.play_bar .music_volum {
+    width: 100px;
+    height: 3px;
+    color: black;
+    background-color: rgb(139, 139, 139);
+    border-radius: 50px;
+    border: none;
+}
+
+.play_bar .music_volum:hover {
+    height: 6px;
+    transition: height .15s ease-in;
+    /* 왠진 모르지만 적용이 잘 안되다가 .을 붙이니까 배속처럼 부드럽게 작동함 */
+}
