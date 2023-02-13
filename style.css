@@ -77,6 +77,10 @@ nav {
     color: rgb(147, 149, 147);
 }
 
+.last_nav ul li:hover {
+    cursor: pointer;
+}
+
 /* input테두리로 하지말고 하나의 값을 또 만들어 해야 입력칸이 조금 떨어져있음 */
 
 .first_article {
@@ -144,8 +148,17 @@ nav {
 
 .recommend_music_list li {
     display: flex;
-    margin-bottom: 20px;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
     overflow: hidden;
+}
+
+.recommend_music_list li:hover {
+    background-color: #d9b9e24f;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    cursor: pointer;
 }
 
 .recommend_music_list img {
@@ -246,11 +259,19 @@ nav {
     font-weight: 700;
 }
 
+.today_nav h1:hover {
+    cursor: pointer;
+}
+
 .today_nav .nav_button {
     border: none;
     background-color: transparent;
     font-size: 13px;
     margin-right: 10px;
+}
+
+.today_nav .nav_button:hover {
+    cursor: pointer;
 }
 
 .today_new_music {
@@ -259,6 +280,16 @@ nav {
     width: 955px;
 }
 
+.today_new_music_list {
+    border-radius: 10px;
+}
+
+.today_new_music_list:hover {
+    background-color: #d2d2d2;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    cursor: pointer;
+}
 
 .today_new_music_list img {
     width: 175px;
@@ -272,7 +303,9 @@ nav {
     flex-direction: column;
     font-size: 15px;
     font-weight: 400;
+    margin: 0 0 8px 8px;
 }
+
 .today_new_music_list strong span {
     font-size: 13px;
     opacity: 0.6;
