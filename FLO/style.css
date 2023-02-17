@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+* {
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    position: sticky;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    padding: 30px 10px;
+    background-color: white;
+    z-index: 9999;
+}
+
+.first_nav {
+    display: flex;
+}
+
+.first_nav a h1 {
+    color: black;
+    margin-right: 40px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.first_nav .category {
+    display: flex;
+    align-items: center;  
+    width: 240px;
+}
+
+.first_nav .category li a {
+    margin-right: 30px;
+    color: black;
+    font-size: 16px;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search input {
+    border: 1px solid #d2d2d2;
+    border-radius: 50px;
+    width: 200px;
+    height: 32px;   
+    padding: 0 4px;
+}
+
+#search input::placeholder {
+    font-size: 13px;
+    padding: 0 0 0 15px;
+}
+
+.last_nav ul{
+    display: flex;
+    width: 300px;
+}
+
+.last_nav ul li {
+    margin-right: 20px;
+    color: rgb(147, 149, 147);
+}
+
+.last_nav ul li:hover {
+    cursor: pointer;
+}
+
+/* input테두리로 하지말고 하나의 값을 또 만들어 해야 입력칸이 조금 떨어져있음 */
+
+.first_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.full_recommend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 955px;
+    order: 2;
+}
+
+.recommend {
+    position: relative;
+    background-color: rgb(94, 68, 112);
+    width: 955px;
+    height: 320px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.recommend_head {
+    position: absolute;
+    color: white;
+    top: 40px;
+    left: 40px;
+}
+
+.recommend_head dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 220px;
+}
+
+.recommend_head dt {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.7;  
+}
+
+.recommend_head dd:last-child:before {
+    content: "·";
+    color: white;
+    margin: 0 10px;
+}
+
+.recommend_music {
+    position: absolute;
+    display: flex;  
+    color: white;
+    height: 260px;
+    top: 40px;
+    right: 20px;
+    margin: 0 70px;
+}
+
+.recommend_music_list:first-child {
+    margin-right: 40px;
+}
+
+.recommend_music_list li {
+    display: flex;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.recommend_music_list li:hover {
+    background-color: #d9b9e24f;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.recommend_music_list img {
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.recommend_music_list strong {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.recommend_music_list span {
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.6;
+}
+
+#play button {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    background-image: url(image/play.png);
+    background-color: transparent;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.paging_list .swiper::before {
+    content: "∘";
+    margin: 5px;
+    cursor: pointer;
+}
+
+.previous_arrow {
+    display: inline;
+    order: 1;
+}
+
+#previous button {
+    background-image: url(image/previous.png);    
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.next_arrow {
+    display: inline;
+    order: 3;
+}
+
+#next button {
+    background-image: url(image/next.png);    
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/*가운데 부분은 문제 없었음 하지만 실제 작업시에는 아래 article과 하나로 묵어야 할 것 같은 느낌이듬.*/
+
+.today_new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.today_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 955px;
+    padding: 0 0 20px 0;
+    z-index: 0;
+}
+
+.today_nav h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.today_nav h1:hover {
+    cursor: pointer;
+}
+
+.today_nav .nav_button {
+    border: none;
+    background-color: transparent;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.today_nav .nav_button:hover {
+    cursor: pointer;
+}
+
+.today_new_music {
+    display: flex;
+    justify-content: space-between;
+    width: 955px;
+}
+
+.today_new_music_list {
+    border-radius: 10px;
+}
+
+.today_new_music_list:hover {
+    background-color: #d2d2d2;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.today_new_music_list img {
+    width: 175px;
+    height: 175px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.today_new_music_list strong {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 8px 8px;
+}
+
+.today_new_music_list strong span {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* nav에 class를 안붙이고 썼더니 붙인 클래스까지 적용되어버림 다음부터 class를 적극적으로 사용해야할듯 */
+
+.play_bar {
+    display: flex;
+    position: fixed;
+    /* 왠지 모르지만 sticky는 작동이 안됨. nav에만 사용 가능한건가...? */
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    z-index: 999;
+}
+
+.play_bar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(112, 112, 112);
+    cursor: pointer;
+}
+
+.play_bar:hover::before {
+    height: 5px;
+    transition: height .5s ease-in;
+}
+/* hover이 가상 선택자 before보다 앞에 있어야 작동됨 */
+.play_bar .track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.play_bar .track img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.play_bar .track strong {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.play_bar .track strong span {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.play_bar .play_music img {
+    width: 250px;
+    height: auto;
+    border: none;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.play_bar .playtime .now_playtime span {
+    font-size: 11px;
+    color: black;
+    margin-right: 3px;
+}
+
+.play_bar .music_volum {
+    width: 100px;
+    height: 3px;
+    color: black;
+    background-color: rgb(139, 139, 139);
+    border-radius: 50px;
+    border: none;
+}
+
+.play_bar .music_volum:hover {
+    height: 6px;
+    transition: height .15s ease-in;
+    /* 왠진 모르지만 적용이 잘 안되다가 .을 붙이니까 배속처럼 부드럽게 작동함 */
+}
