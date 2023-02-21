@@ -6,5 +6,43 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header {
+    background-image: url(./assets/header/back.png);
+    width: 100%;
+    height: 980px;
+}
+
+.header .nav_container {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav_container .title {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav_container .title::after {
+    content: "·";
+    color: white;
+    font-size: 16px;
+}
+
+.header .nav_container .title .logo {
+    background-image: url(./assets/header/logo_white.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 70px;
+    height: 26px;
+}
+
+
+.header .nav_container .list {
+    display: flex;
 }
 
