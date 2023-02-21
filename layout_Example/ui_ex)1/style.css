@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Raleway:wght@400;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,43 +6,217 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Raleway', sans-serif;
 }
 
 .header {
+    position: absolute;
     background-image: url(./assets/header/back.png);
     width: 100%;
     height: 980px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .header .nav_container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 24px;
 }
 
-.header .nav_container .title {
+.header .nav_container .left_nav {
     display: flex;
     align-items: center;
 }
 
-.header .nav_container .title::after {
+.header .nav_container .left_nav .title {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav_container .left_nav .title::after {
     content: "·";
     color: white;
     font-size: 16px;
+    margin-right: 40px;
 }
 
-.header .nav_container .title .logo {
+.header .nav_container .left_nav .title .logo {
     background-image: url(./assets/header/logo_white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 70px;
     height: 26px;
+    margin-right: 40px;
 }
 
-
-.header .nav_container .list {
+.header .nav_container .left_nav .list {
     display: flex;
 }
+
+.header .nav_container .left_nav .list .list_element {
+    margin-right: 40px;
+}
+
+.header .nav_container .left_nav .list .list_element a {
+    color: white;
+    cursor: pointer;
+}
+
+.header .nav_container .left_nav .list .list_element a:hover {
+    color: #FFA3A3;
+}
+
+.header .nav_container .right_nav {
+    display: flex;
+    white-space: nowrap;
+}
+
+.header .nav_container .right_nav .btns {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #381DDB;
+    background: none;
+    border: none;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.header .nav_container .right_nav .link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #381DDB;
+    border: 1px solid #381DDB;
+    padding: 8px 16px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 566px;
+    margin: 147px auto 0 auto;
+}
+
+.header .container .left_section .sub_title {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.header .container .left_section .sub_title::before {
+    content: "";
+    background-image: url(./assets/header/star.png);
+    background-position: center;
+    background-size: contain;  
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.header .container .left_section .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #FFA3A3;
+    margin-bottom: 40px;
+}
+
+.header .container .left_section .content {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.header .container .left_section .click {
+    display: flex;
+    align-items: center;
+}
+
+.header .container .left_section .click span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FFA3A3;
+    margin-right: 10px;
+}
+
+.header .container .left_section .click ion-icon {
+    font-size: 24px;
+    color: #FFA3A3;
+}
+
+.header .container .right_section {
+    position: relative;
+    background: white;
+    width: 470px;
+    height: 566px;
+    padding: 60px;
+    box-shadow: 0 20px 100px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+
+.header .container .right_section .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.header .container .right_section .login {
+    border: 1px solid #b4b4b4;
+    padding: 0.9em 0;
+    width: 260px;
+    margin-bottom: 20px;
+}
+
+.header .container .right_section .login::placeholder {
+    color: #b4b4b4;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 14px;
+}
+
+.header .container .right_section .login:nth-child(4) {
+    margin-bottom: 30px;
+}
+
+.header .container .right_section .btn {
+    color: white;
+    background-color: #381DDB;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0.875em 1.75em;
+}
+
+.header .container .right_section .patterns .line {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.header .container .right_section .patterns .pc {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    z-index: 3;
+}
+
+/* ----------header.style end_line---------- */
 
