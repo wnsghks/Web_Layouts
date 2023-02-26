@@ -1,4 +1,4 @@
-web과 관련된 모든 연습들
+## web과 관련된 모든 연습들
 
-layout
-navigation_bar
+- layout
+- navigation_bar
