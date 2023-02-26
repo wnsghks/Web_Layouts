@@ -1,4 +1,4 @@
-## web과 관련된 모든 연습들
+## web front 연습
 
 - layout
 - navigation_bar
