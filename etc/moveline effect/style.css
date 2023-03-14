@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+    /* 호환성이 좋지않다고 사용에 주의를 바란다고 mdn에 써있다 이 기능은 below아래쪽에 반사하는 기능이다. */
+}
+
+.container .box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #00f376 10%, transparent 10%, transparent 50%, #00f376 50%,  #00f376 60%, transparent 60%, transparent 100%);
+    /* 서로 접하는 색의 %를 필요한 너비만큼 일정하게 주면 그라디언트에 선이 생겨 서로 구분되어지게 한다. 초록선을 만들기위해서 초록과 투명을 이용한 방법이다. */
+    background-size: 40px 40px;
+    transform: rotate(calc(var(--i) * 90deg));
+    filter: hue-rotate(calc(var(--i) * 90deg));
+    /* 채도를 90도 만큼 돌려준다 이때 var선언은 html에 있는 숫자와 곱해져서 각각 다른 결과를 도출한다. */
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    0% {background-position: 0;}
+    100% {background-position: 40px;}
+}
+/* animate 라는 함수를 만들어서 animation 효과를 더 자세히 다룰 수 있게 함 */
