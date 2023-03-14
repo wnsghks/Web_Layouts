@@ -2,3 +2,5 @@
 
 - layout
 - navigation_bar
+- glassmorphism
+- moveline effect
