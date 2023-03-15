@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .slide.slide1 {
+    background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMTdfMjA2%2FMDAxNjc2NjExNTYwNzQ1.UX5tDMHzj02SJem0c5uKfBVBMku8iMXEij8KGadHOgcg._PLEUxRwYZo0S0HJ404LrQpttUm4BNZMDNq-wQx8z9cg.JPEG.znffj123%2F%25B0%25E8%25BB%25EA%25BF%25AA%25B0%25AD%25BE%25C6%25C1%25F6%25BA%25D0%25BE%25E719.jpg&type=sc960_832);
+    background-size: contain;
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+.container .slide.slide2 {
+    background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjFfMjA0%2FMDAxNjcxNTk1NDY4NzEz.uO2-vLpqhDmQaX0yuBU3Ooxd0pLjWOZ2fQ05-pFRUOkg.vXiCh_PBduB3oCbSBvYU7dOZkk2iWBO979odUtk19kog.JPEG.thro43211%2F20221221130307.jpg&type=sc960_832);
+    background-size: contain;
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
