@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    filter: contrast(50);
+    /* 블러처리한 것까지 명확하게 보여주는 것이므로 이어진것처럼 나타나게 된다. */
+}
+
+#container .box {
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    background:#000;
+    border-radius: 50%;
+    filter: blur(10px);
+    transition: 2s;
+}
