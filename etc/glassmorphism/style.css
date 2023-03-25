@@ -27,7 +27,7 @@ section::before {
     height: 50%;
     bottom: 0;
     background: #a0a0a0;
-    border-top: 1px solid rgba(255, 255, 2555, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     z-index: 10;
